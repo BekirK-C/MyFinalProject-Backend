@@ -13,7 +13,7 @@ namespace DataAccess.Concrete.EntityFramework
         // Hangi veritabanına bağlanacığını gösterdik
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=DESKTOP-MP6HDBU; Databse=Northwind; Trusted_Connection=true");
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP-MP6HDBU; Database=Northwind; Trusted_Connection=true");
         }
 
         // Hangi classın hangi tabloya karşılık geldiğini gösterdik.
