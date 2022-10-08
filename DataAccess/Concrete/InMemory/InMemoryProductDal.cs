@@ -12,12 +12,13 @@ namespace DataAccess.Concrete.InMemory
         List<Product> _products;
         public InMemoryProductDal()
         {
-            _products = new List<Product> {
-                new Product{ProductId=1, CategoryId=1, ProductName="Bardak",UnitPrice=15, UnıtInStock=15},
-                new Product{ProductId=2, CategoryId=1, ProductName="Tabak",UnitPrice=500, UnıtInStock=3},
-                new Product{ProductId=3, CategoryId=2, ProductName="Telefon",UnitPrice=1500, UnıtInStock=2},
-                new Product{ProductId=4, CategoryId=2, ProductName="Laptop",UnitPrice=150, UnıtInStock=65},
-                new Product{ProductId=5, CategoryId=2, ProductName="Tablet",UnitPrice=85, UnıtInStock=1},
+            _products = new List<Product> 
+            {
+                new Product {ProductId = 1, CategoryId = 1, ProductName = "Bardak", UnitPrice = 15, UnıtInStock = 15},
+                new Product {ProductId = 2, CategoryId = 1, ProductName = "Tabak", UnitPrice = 500, UnıtInStock = 3},
+                new Product {ProductId = 3, CategoryId = 2, ProductName = "Telefon", UnitPrice = 1500, UnıtInStock = 2},
+                new Product {ProductId = 4, CategoryId = 2, ProductName = "Laptop", UnitPrice =150, UnıtInStock = 65},
+                new Product {ProductId = 5, CategoryId = 2, ProductName = "Tablet", UnitPrice = 85, UnıtInStock = 1},
             };
         }
         public void Add(Product product)

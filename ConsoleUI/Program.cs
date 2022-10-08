@@ -10,7 +10,7 @@ namespace ConsoleUI
         {
             ProductManager productManager = new ProductManager(new InMemoryProductDal());
 
-            foreach (var product in productManager.GetAll())
+            foreach (var product in productManager.GetAllOne())
             {
                 Console.WriteLine(product.ProductName);
             }
