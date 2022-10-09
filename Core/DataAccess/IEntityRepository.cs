@@ -1,10 +1,11 @@
-﻿using Entities.Abstract;
+﻿using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace DataAccess.Abstract
+// CORE KATMANI DİĞER AKTMANLARI REFERANS ALMAZ. CORE KATMANI EVRENSELDİR. TÜM .NET PROJEELRİNDE KULLANILABİLİR. 
+namespace Core.DataAccess
 {
     public interface IEntityRepository<T> where T : class, IEntity, new()
     {
