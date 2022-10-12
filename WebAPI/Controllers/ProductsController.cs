@@ -20,11 +20,14 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
-        public List<Product> Get()
+        public IActionResult Get()
         {
-            IProductService productService = new ProductManager(new EfProductDal());
-            var result = productService.GetAll();
-            return result.Data;
+            var result = _productService.GetAll();
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result.Message);
         }
     }
 }
