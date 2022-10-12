@@ -12,6 +12,7 @@ namespace WebAPI.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
+        // Bu şekilde kullabilmek için IoC kullandık. Startup içerisinde.
         IProductService _productService;
 
         public ProductsController(IProductService productService)
@@ -19,8 +20,8 @@ namespace WebAPI.Controllers
             _productService = productService;
         }
 
-        [HttpGet]
-        public IActionResult Get()
+        [HttpGet("getall")]
+        public IActionResult GetAll()
         {
             var result = _productService.GetAll();
             if (result.Success)
@@ -30,8 +31,19 @@ namespace WebAPI.Controllers
             return BadRequest(result.Message);
         }
 
-        [HttpPost]
-        public IActionResult Post(Product product)
+        [HttpGet("getbyıd")]
+        public IActionResult GetById(int id)
+        {
+            var result = _productService.GetByProductId(id);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpPost("add")]
+        public IActionResult Add(Product product)
         {
             var result = _productService.Add(product);
             if (result.Success)
