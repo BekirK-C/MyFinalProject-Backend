@@ -31,7 +31,7 @@ namespace Business.Concrete
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
-            IResult result = BusinessRules.Run(CheckIfProductNameIsUniqe(product.ProductName), CheckIfProductCountOfCategoryCorrect(product.CategoryId));
+            IResult result = BusinessRules.Run(CheckIfProductNameIsUniqe(product.ProductName), CheckIfProductCountOfCategoryCorrect(product.CategoryId), CheckIfCategoryLimitExceded());
 
             if (result != null)
             {
