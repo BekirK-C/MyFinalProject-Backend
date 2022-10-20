@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Core.CrossCuttingConcerns.Validation
 {
-    // Bu tip tool'lar genelde static yapılır. Tek instance oluşturup sadece onu kullnabilmek için. Tekrar new'lemeye gerek kalmaz
+    // Bu tip tool'lar genelde static yapılır. Tek instance oluşturup sadece onu kullanabilmek için. Tekrar new'lemeye gerek kalmaz
     public static class ValidationTool
     {
         public static void Validate(IValidator validator, object entity)

@@ -28,6 +28,7 @@ namespace Business.Concrete
             _categoryService = categoryService;
         }
 
+        // [SecuredOperation("admin, edtor")]
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
@@ -36,7 +37,7 @@ namespace Business.Concrete
             if (result != null)
             {
                 return result;
-            }
+            } 
             _productDal.Add(product);
             return new SuccessResult(Messages.ProductAdded);
         }
