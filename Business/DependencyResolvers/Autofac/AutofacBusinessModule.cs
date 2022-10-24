@@ -22,7 +22,7 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<ProductManager>().As<IProductService>().SingleInstance();  // Startup'taki AddSingleton'a karşılık gelir.
             builder.RegisterType<EfProductDal>().As<IProductDal>().SingleInstance();
 
-            builder.RegisterType<CategoryManager>().As<ICategoryService>().SingleInstance();  // Startup'taki AddSingleton'a karşılık gelir.
+            builder.RegisterType<CategoryManager>().As<ICategoryService>().SingleInstance();
             builder.RegisterType<EfCategoryDal>().As<ICategoryDal>().SingleInstance();
 
             builder.RegisterType<UserManager>().As<IUserService>();
